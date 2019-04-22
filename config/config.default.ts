@@ -9,7 +9,8 @@ export default (appInfo: EggAppInfo) => {
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',
-    port: 3306,
+    port: 32782,
+    password: 'qian@1234',
     database: '',
   };
   // add your egg config in here
