@@ -9,12 +9,16 @@ logs/
 .vscode
 *.swp
 *.lock
-*.js
-!.autod.conf.js
+*.log
+*.env
 
-app/**/*.js
 test/**/*.js
 config/**/*.js
 app/**/*.map
 test/**/*.map
 config/**/*.map
+/package-lock.json
+/config/config.local.ts
+/typings
+/typings/app
+/typings/config

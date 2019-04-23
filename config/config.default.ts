@@ -8,10 +8,10 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_15727575702_3268';
   config.sequelize = {
     dialect: 'mysql',
-    host: '127.0.0.1',
-    port: 32782,
-    password: 'qian@1234',
-    database: '',
+    host: 'localhost',
+    port: 3306,
+    password: 'yujiajun1234',
+    database: 'javen',
   };
   // add your egg config in here
   config.middleware = [];
