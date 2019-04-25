@@ -2,7 +2,7 @@
 {
   "extends":  ["tslint-config-egg"],
   "rules":{
-    "no-console":false,
+    "no-console":true,
     // 缩进
     "indent":[true, "spaces", 4],
     // 空行不超过两行
