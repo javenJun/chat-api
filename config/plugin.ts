@@ -1,15 +1,18 @@
 import { EggPlugin } from 'egg';
-
-exports.sequelize = {
-  enable: true,
-  package: 'egg-sequelize',
-};
 const plugin: EggPlugin = {
-  // static: true,
-  // nunjucks: {
-  //   enable: true,
-  //   package: 'egg-view-nunjucks',
-  // },
+  static: true,
+  sequelize: {
+    enable: true,
+    package: 'egg-sequelize',
+  },
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
+  redis: {
+    enable: true,
+    package: 'egg-redis',
+  },
 };
 
 export default plugin;

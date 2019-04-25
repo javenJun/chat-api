@@ -46,7 +46,7 @@ If the pull fails, there may be a code change, you need to submit the changes fi
 
 ```bash
 $ git add . OR git add *
-$ git commit -m '提交描述'
+$ git commit -m 'description'
 ```
 
 After submitting, pull the code again:

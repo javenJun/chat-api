@@ -1,3 +1,16 @@
+
 {
-  "extends": ["tslint-config-egg"]
+  "extends":  ["tslint-config-egg"],
+  "rules":{
+    "no-console":false,
+    // 缩进
+    "indent":[true, "spaces", 4],
+    // 空行不超过两行
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    // 对齐
+    "align": [true, "parameters", "statements"]
+  }
 }
