@@ -13,6 +13,9 @@ export default (appInfo: EggAppInfo) => {
         port: 3306,
         password: 'yujiajun1234',
         database: 'javen',
+        define: {
+          schema: 'zq_',
+        },
     };
 
     // 跨域解决
@@ -40,7 +43,7 @@ export default (appInfo: EggAppInfo) => {
     },
 
     config.io = {
-        init: { }, // passed to engine.io, Egg Socket 内部默认使用 ws 引擎，uws 因为某些原因被废止。
+        init: { },  // passed to engine.io, Egg Socket 内部默认使用 ws 引擎，uws 因为某些原因被废止。
         namespace: {
                 '/': {
                     connectionMiddleware: [],
