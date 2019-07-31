@@ -16,7 +16,7 @@ export abstract class Base extends Model<Base> {
         comment: '更新时间',
     })
     @UpdatedAt
-    updateTime: Date;
+    updateTime?: Date;
 
     @Column({
         comment: '更新人',
@@ -68,7 +68,7 @@ export abstract class BaseWithIdAndUserId extends BaseWithId {
         allowNull: false,
         comment: '用户组件id',
     })
-    userid: string;
+    userid?: string;
  }
 
 
@@ -81,5 +81,5 @@ export abstract class BaseWithUUIDAndUserId extends BaseWithUUID {
         allowNull: false,
         comment: '用户组件id',
     })
-    userid: string;
+    userid?: string;
  }

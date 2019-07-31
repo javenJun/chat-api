@@ -6,7 +6,7 @@ export default class UserController extends Controller {
     @Post('/user/signup')
     @Description('用户邮箱注册')
     async signUp() {
-        const { ctx, service } = this;
-        const body = ctx.body;
+        // const { ctx } = this;
+        // const body = ctx.body;
     }
 }

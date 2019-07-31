@@ -16,7 +16,7 @@
             username: 'root',
             password: 'yujiajun1234',
             // 数据库名
-            database: 'javen',
+            database: 'zhiqu',
             // 是否自动进行下划线转换（这里是因为DB默认的命名规则是下划线方式，而我们使用的大多数是驼峰方式）
             underscored: true,
             // 时区，sequelize有很多自动时间的方法，都是和时区相关的，记得设置成东8区（+08:00）
