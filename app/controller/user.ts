@@ -1,10 +1,12 @@
 import { Controller } from 'egg';
+import { Post, Description } from 'egg-shell-decorators';
 
 export default class UserController extends Controller {
 
-    async signUpEmail() {
+    @Post('/user/signup')
+    @Description('用户邮箱注册')
+    async signUp() {
         const { ctx, service } = this;
         const body = ctx.body;
-
     }
 }
