@@ -1,5 +1,5 @@
-import { DataType, Table, Column, IsIn } from 'sequelize-typescript';
-const { STRING, ENUM, SMALLINT } = DataType;
+import { DataType, Table, Column } from 'sequelize-typescript';
+const { STRING, SMALLINT } = DataType;
 import { BaseWithUUID } from './base';
 @Table({ tableName: 'user' })
 export class User extends BaseWithUUID {

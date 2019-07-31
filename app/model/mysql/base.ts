@@ -1,5 +1,5 @@
 import { Model, DataType, Column, CreatedAt, UpdatedAt } from 'sequelize-typescript';
-const { STRING, INTEGER, NOW, UUID, UUIDV4 } = DataType;
+const { UUIDV4 } = DataType;
 export abstract class Base extends Model<Base> {
     @Column({
         comment: '创建时间',
