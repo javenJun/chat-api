@@ -2,7 +2,7 @@ import { DataType, Table, Column } from 'sequelize-typescript';
 const { STRING, SMALLINT } = DataType;
 import { BaseWithUUID } from './base';
 @Table({ tableName: 'user' })
-export class User extends BaseWithUUID {
+export default class User extends BaseWithUUID {
     @Column({
         type: STRING(255),
         comment: '昵称',

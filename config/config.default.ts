@@ -17,6 +17,7 @@
             password: 'yujiajun1234',
             // 数据库名
             database: 'zhiqu',
+            baseDir: 'nothing',
             // 是否自动进行下划线转换（这里是因为DB默认的命名规则是下划线方式，而我们使用的大多数是驼峰方式）
             underscored: true,
             // 时区，sequelize有很多自动时间的方法，都是和时区相关的，记得设置成东8区（+08:00）
@@ -39,7 +40,6 @@
             origin: '*',
             allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
         };
-
         // redis 缓存问题
         config.redis = {
             client: {
@@ -49,6 +49,20 @@
                 db: 0,
             },
         };
+        // 参数验证
+        config.validatePlus = {
+            resolveError(ctx, errors) {
+              if (errors.length) {
+                ctx.type = 'json';
+                ctx.status = 400;
+                ctx.body = {
+                  code: 10001,
+                  err: errors,
+                  msg: '参数错误',
+                };
+              }
+            },
+          };
 
         // config.io = {
         //     init: { },  // passed to engine.io, Egg Socket 内部默认使用 ws 引擎，uws 因为某些原因被废止。
@@ -59,6 +73,7 @@
         //             },
         //         },
         // };
+
         // add your egg config in here
         config.middleware = [
         ];
