@@ -23,7 +23,7 @@
             // 时区，sequelize有很多自动时间的方法，都是和时区相关的，记得设置成东8区（+08:00）
             timezone: '+08:00',
             define: {
-            schema: 'zq_',
+                schema: 'zq_',
             },
         };
 

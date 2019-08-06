@@ -8,6 +8,7 @@ export default {
         ctx.body = {
             code : 1,
             msg,
+            data: [],
         };
         if (data) {
             has(data, 'data') ? ctx.body.data = data : ctx.body.data = data;

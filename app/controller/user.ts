@@ -15,7 +15,7 @@ export default class UserController extends Controller {
             const validateResult = await ctx.validate(SIGNUP_RULES, body);
             if (!validateResult) return;
             if (body.password !== body.repassword) return ctx.fail(-1, '两次输入的密码不一致', '参数错误');
-            const res = await service.user.signup(body);
+            const res = await service.user.signup(body.username, body.password);
             ctx.success(res);
         } catch (err) {
             ctx.fail(-1, err);
